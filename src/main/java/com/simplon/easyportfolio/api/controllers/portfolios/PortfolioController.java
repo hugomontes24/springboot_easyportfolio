@@ -61,7 +61,7 @@ public class PortfolioController {
             portfolioService.update(new PortfolioServiceRequestModel( Optional.ofNullable(id), portfolioGetDTO.getTitle(),
                     portfolioGetDTO.getName(),
                     portfolioGetDTO.getFirstname(), portfolioGetDTO.getEmail()));
-            return ResponseEntity.ok("Le portfolio id: "+ id +" a été modifié");
+            return ResponseEntity.ok("Le portfolio id: "+ id +" a été modifié **.");
         }else{
            throw new PortfolioNotFoundException(HttpStatus.NOT_FOUND, "Le folio n'a pas été trouvé.");
         }
